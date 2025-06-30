@@ -72,7 +72,6 @@ header h1{
     gap: 20px;
 }
 .about{
-    gap: 20px;
     width: 90%;
     text-align: center;
 }
@@ -137,6 +136,12 @@ header h1{
 section{
     margin: 40px 0 40px 0;
 }
+.work_main ul{
+    text-align: center;
+}
+.work_main img{
+    width: 70%;
+}
 
 .loading {
     /*ローディング画面の縦横幅を画面いっぱいになるように指定*/
@@ -147,6 +152,7 @@ section{
     top: 0;
     left: 0;
     background: #ffffff;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -179,6 +185,7 @@ section{
       transform: rotate(360deg);
     }
   }
+  
   /* .inner{
     max-width: 1200px;
     width: 100%;

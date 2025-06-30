@@ -63,11 +63,16 @@
     //ローディング画面を取得
     const loading = document.querySelector(".loading");
 
-    //ページの読み込み完了時に処理を実行
-    window.addEventListener("load", () => {
-    //3秒後にローディング画面を非表示にする
-    setTimeout(() => {
-        loading.classList.add("loaded");
-    }, 30000);
-    });
+    if (!sessionStorage.getItem("visited")){
+        //ページの読み込み完了時に処理を実行
+        window.addEventListener("load", () => {
+        //3秒後にローディング画面を非表示にする
+        setTimeout(() => {
+            loading.classList.add("loaded");
+            sessionStorage.setItem("visited", "true");
+        }, 3000);
+        });
+    } else {
+        loading.parentNode.removeChild(loading);
+    }
 </script>
