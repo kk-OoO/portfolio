@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>ポートフォリオ</title>
+</head>
+<body>
+    <!-- ローディング画面 -->
+    <div class="loading">
+        <p class="loading-text">Loading...</p>
+   </div>
+    <header>
+        <ul class="header-left">
+            <a href="index.html">
+                <div class="flex">
+                    <li><img src="image/Frame1.png" alt="ロゴ"></li>
+                    <li><h1>portfolio</h1></li>
+                </div>
+            </a>
+        </ul>
+        <ul class="header-right">
+            <li><a href="profile.html">about me</a></li>
+            <li><a href="work.html">My work</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="screen">
+            <img src="image/Desktop - 1.png">
+        </div>
+        
+        <section class="about">
+            <h2 class="title">About</h2>
+            <ul>
+                <div class="index_about">
+                    <div class="icon"><img src="image/Image200.jpg" alt="似顔絵"></div>
+                    <h3>海原 來未-Kaihara Kurumi-</h3>
+                    <p class="aboutme">趣味のオンラインゲームがきっかけでパソコンに触れる機会が多くなり、日々の生活を便利にするシステムを作りたいと思い専門学校への入学を決意。4年制のスーパーゲームIT科ホワイトハッカー専攻でシステム開発やセキュリティについて学ぶ。</p>
+                </div>
+                <p class="a_hover"><a href="profile.html">もっと知る→</a></p>
+            </ul>
+        </section>
+        <section>
+            <h2 class="title">Works</h2>
+            <div class="flex">
+                <p class="subtitle">専門学校の授業や制作展のため制作した作品です。</p>
+                <p class="a_hover"><a href="work.html">もっとみる→</a></p>
+            </div>
+        </section>
+        <section>
+        <h2 class="title">Contact</h2>
+            <div class="contact">
+                <p>ご覧いただきありがとうございます。何かあれば下記までご連絡ください。</p>
+                <p>OCA2302WH0008@edu.oca.ac.jp</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+<script>
+    //ローディング画面を取得
+    const loading = document.querySelector(".loading");
+
+    //ページの読み込み完了時に処理を実行
+    window.addEventListener("load", () => {
+    //3秒後にローディング画面を非表示にする
+    setTimeout(() => {
+        loading.classList.add("loaded");
+    }, 30000);
+    });
+</script>

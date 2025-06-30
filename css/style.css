@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+li{
+    list-style: none;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    background-color: #ffffff;
+}
+header ul{
+    display: flex;
+}
+.header-left{
+    display: flex;
+}
+header h1{
+    color:black;
+    padding: 50px 0 0 20px;
+}
+.header-right{
+    padding-top: 30px;
+}
+.header-right li{
+    padding: 10px;
+}
+.header-right a{
+    color: black;
+    position: relative;
+}
+.header-right a::after {
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #000000;
+    bottom: -5px; /*アンダーラインが現れ始める位置（aタグの下辺からの高さ）*/
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.header-right a:hover::after {
+    visibility: visible;
+    bottom: 3px;
+    opacity: 1;
+}
+
+.screen img {
+    width: 100%;
+}
+.flex{
+    display: flex;
+    text-align: center;
+}
+.skill li{
+    background-color: rgb(222, 221, 231);
+    width: 400px;
+    border-radius: 20px;
+    padding: 20px;
+}
+.skill ul{
+    justify-content: center;
+    gap: 20px;
+}
+.about{
+    gap: 20px;
+    width: 90%;
+    text-align: center;
+}
+.explanation{
+    color: rgb(129, 129, 129);
+}
+.Strengths ul{
+    gap: 20px;
+    justify-content: center;
+}
+.Strengths li{
+    background-color: rgb(222, 221, 231);
+    width: 400px;
+    border-radius: 20px;
+    padding: 20px;
+}
+.title{
+    text-align: center;
+}
+.subtitle{
+    margin: 20px 0 20px 20%;
+}
+.aboutme{
+    width: 40%;
+}
+.index_about{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    gap: 30px;
+}
+.a_hover a{
+    position: relative;
+}
+.a_hover a::after {
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #000000;
+    bottom: -5px; /*アンダーラインが現れ始める位置（aタグの下辺からの高さ）*/
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.a_hover a:hover::after {
+    visibility: visible;
+    bottom: 3px;
+    opacity: 1;
+}
+.contact{
+    border: solid;
+    width: 600px;
+    margin: 20px auto 50px auto;
+    padding: 30px;
+}
+.contact p{
+    text-align: center;
+}
+section{
+    margin: 40px 0 40px 0;
+}
+
+.loading {
+    /*ローディング画面の縦横幅を画面いっぱいになるように指定*/
+    width: 100vw;
+    height: 100vh;
+    /*ローディング画面の表示位置を固定*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /*ローディング画面を0.5秒かけて非表示にする*/
+    transition: all 0.5s linear;
+  }
+  
+  /*ローディング画面を非表示にする*/
+  .loading.loaded {
+    /*0.5秒かけてopacityを0にする*/
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .loading-text {
+    color: #000000;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  /* アニメーションの設定 */
+  @keyframes spinner-rotation {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  /* .inner{
+    max-width: 1200px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 20px;
+  }
+  .mainView{
+    height: calc(100vh - 50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    position: relative;
+  }
+  .mainView p{
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .scrollDown{
+    position: absolute;
+    bottom: 80px;
+    right: 50%;
+    animation: scrollDown 1s ease-in-out infinite;
+  }
+  @keyframes scrollDown{
+    0% {bottom: 10%}
+    50% {bottom: 15%}
+    100% {bottom: 10%}
+  }
+  .scrollDown span{
+    position: absolute;
+    left: -25px;
+    bottom: 10px;
+    font-size: 0.8em;
+    letter-spacing: 0.05em;
+    writing-mode: vertical-rl;
+  }
+  .scrollDown::before{
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 20px;
+    background-color: #333;
+    bottom: 0;
+    right: -6px;
+    transform: skew(-30deg);
+  }
+  .scrollDown::after{
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 60px;
+    background-color: #333;
+    bottom: 0;
+    right: 0;
+  }
+  .boxes{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 80px;
+    margin-top: 100px;
+  }
+  .box {
+    aspect-ratio: 16 / 9;
+    background-color: #dedede;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s;
+    transform: translateY(150px);
+  }
+  .is-active {
+    /*要素を表示させる*/
+    /* opacity: 1;
+    visibility: visible; */
+    /*元の位置に戻す*/
+    /* transform: translateY(0);
+  } */ 
