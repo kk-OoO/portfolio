@@ -59,7 +59,7 @@ header h1{
 }
 .flex{
     display: flex;
-    text-align: center;
+    justify-content: center;
 }
 .skill li{
     background-color: rgb(222, 221, 231);
@@ -72,7 +72,6 @@ header h1{
     gap: 20px;
 }
 .about{
-    width: 90%;
     text-align: center;
 }
 .explanation{
@@ -91,17 +90,16 @@ header h1{
 .title{
     text-align: center;
 }
-.subtitle{
-    margin: 20px 0 20px 20%;
-}
 .aboutme{
     width: 40%;
+}
+.works_sec{
+  justify-content: center;
 }
 .index_about{
     display: flex;
     gap: 30px;
     justify-content: center;
-    gap: 30px;
 }
 .a_hover a{
     position: relative;
@@ -186,82 +184,9 @@ section{
     }
   }
   
-  /* .inner{
-    max-width: 1200px;
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 0 20px;
+@media screen and (max-width: 1200px) {
+  .index_about{
+    gap: 30px;
+    text-align: center;
   }
-  .mainView{
-    height: calc(100vh - 50px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
-    position: relative;
-  }
-  .mainView p{
-    font-size: 28px;
-    font-weight: bold;
-  }
-  .scrollDown{
-    position: absolute;
-    bottom: 80px;
-    right: 50%;
-    animation: scrollDown 1s ease-in-out infinite;
-  }
-  @keyframes scrollDown{
-    0% {bottom: 10%}
-    50% {bottom: 15%}
-    100% {bottom: 10%}
-  }
-  .scrollDown span{
-    position: absolute;
-    left: -25px;
-    bottom: 10px;
-    font-size: 0.8em;
-    letter-spacing: 0.05em;
-    writing-mode: vertical-rl;
-  }
-  .scrollDown::before{
-    position: absolute;
-    content: "";
-    width: 1px;
-    height: 20px;
-    background-color: #333;
-    bottom: 0;
-    right: -6px;
-    transform: skew(-30deg);
-  }
-  .scrollDown::after{
-    position: absolute;
-    content: "";
-    width: 1px;
-    height: 60px;
-    background-color: #333;
-    bottom: 0;
-    right: 0;
-  }
-  .boxes{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 20px;
-    row-gap: 80px;
-    margin-top: 100px;
-  }
-  .box {
-    aspect-ratio: 16 / 9;
-    background-color: #dedede;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 1s;
-    transform: translateY(150px);
-  }
-  .is-active {
-    /*要素を表示させる*/
-    /* opacity: 1;
-    visibility: visible; */
-    /*元の位置に戻す*/
-    /* transform: translateY(0);
-  } */ 
+}
