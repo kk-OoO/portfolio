@@ -21,6 +21,9 @@ header ul{
 .header-left{
     display: flex;
 }
+.header_left_flex{
+  display: flex;
+}
 header h1{
     color:black;
     padding: 50px 0 0 20px;
@@ -42,7 +45,7 @@ header h1{
     width: 100%;
     height: 2px;
     background: #000000;
-    bottom: -5px; /*アンダーラインが現れ始める位置（aタグの下辺からの高さ）*/
+    bottom: -8px; /*アンダーラインが現れ始める位置（aタグの下辺からの高さ）*/
     opacity: 0;
     visibility: hidden;
     transition: 0.3s;
@@ -50,7 +53,7 @@ header h1{
 
 .header-right a:hover::after {
     visibility: visible;
-    bottom: 3px;
+    bottom: -2px;
     opacity: 1;
 }
 
@@ -92,15 +95,15 @@ header h1{
 }
 .aboutme{
     width: 40%;
+    margin: 0 auto;
 }
 .works_sec{
   justify-content: center;
 }
-.index_about{
-    display: flex;
+  .index_about{
+    display: block;
     gap: 30px;
-    justify-content: center;
-}
+  }
 .a_hover a{
     position: relative;
 }
@@ -134,11 +137,24 @@ header h1{
 section{
     margin: 40px 0 40px 0;
 }
+.work_main{
+  text-align: center;
+}
+.work_main h2{
+  margin: 15px 0;
+}
+
 .work_main ul{
     text-align: center;
 }
 .work_main img{
     width: 70%;
+    border: solid 1px #000000;
+    padding: 10px;
+    border-radius: 10px;
+}
+.work_main h3{
+  margin: 5px 0;
 }
 
 .loading {
@@ -183,10 +199,25 @@ section{
       transform: rotate(360deg);
     }
   }
+
+@media screen and (max-width: 1500px) {
+    .plofile_main .flex{
+      text-align: center;
+      margin: 0 auto;
+      flex-direction: column;
+      align-items: center;
+    }
+}
   
 @media screen and (max-width: 1200px) {
-  .index_about{
-    gap: 30px;
-    text-align: center;
+  .contact{
+    width: 80%;
   }
+  .plofile_main .flex{
+      text-align: center;
+      margin: 0 auto;
+      flex-direction: column;
+      align-items: center;
+  }
+
 }
